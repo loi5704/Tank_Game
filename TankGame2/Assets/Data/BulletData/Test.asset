@@ -10,8 +10,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 780dde960e0132f4fbd90b903475058e, type: 3}
-  m_Name: PlayerBulletData
+  m_Name: Test
   m_EditorClassIdentifier: 
-  speed: 10
+  speed: 100
   damage: 25
   maxDistance: 10
