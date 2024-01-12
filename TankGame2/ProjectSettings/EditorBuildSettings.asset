@@ -20,4 +20,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Lose.unity
     guid: 2124e943cd2a4f846acd21bc8718d8b4
+  - enabled: 1
+    path: Assets/Scenes/HighscoreTable.unity
+    guid: 39a97086f91579c4b83e707b1144830f
   m_configObjects: {}

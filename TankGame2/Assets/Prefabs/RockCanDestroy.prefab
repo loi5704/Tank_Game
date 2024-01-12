@@ -163,6 +163,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   MaxHealth: 100
+  ScoreValue: 0
+  PenaltyValue: 0
   health: 0
   OnDead:
     m_PersistentCalls:
