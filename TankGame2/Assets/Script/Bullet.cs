@@ -53,25 +53,11 @@ public class Bullet : MonoBehaviour
     {
         Debug.Log("Collidered" + collision.name);
         OnHit?.Invoke();
-        bool check = true;
-
         var damagable = collision.GetComponent<Damagable>();
         if (damagable != null)
         {
-            check = false;
             damagable.Hit(bulletData.damage);
         }
-
-        if(check)
-        {
-            var damagableTank = collision.GetComponent<DamagableTank>();
-            if (damagableTank != null)
-            {
-                damagableTank.Hit(bulletData.damage);
-            }
-        }
-
-
 
         DisableObject();
     }

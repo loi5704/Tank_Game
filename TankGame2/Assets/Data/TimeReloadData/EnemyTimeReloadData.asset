@@ -12,4 +12,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9f72509e0281639449e69de0b49feb3f, type: 3}
   m_Name: EnemyTimeReloadData
   m_EditorClassIdentifier: 
-  reloadDelay: 0.5
+  reloadDelay: 1

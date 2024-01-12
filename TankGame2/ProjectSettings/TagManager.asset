@@ -62,6 +62,9 @@ TagManager:
   - name: SpecialEffect
     uniqueID: 3810609453
     locked: 0
+  - name: Bush
+    uniqueID: 3214030799
+    locked: 0
   - name: UI
     uniqueID: 215505243
     locked: 0
