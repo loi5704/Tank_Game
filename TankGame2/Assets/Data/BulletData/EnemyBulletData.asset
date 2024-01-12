@@ -12,6 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 780dde960e0132f4fbd90b903475058e, type: 3}
   m_Name: EnemyBulletData
   m_EditorClassIdentifier: 
-  speed: 100
+  speed: 20
   damage: 25
   maxDistance: 10
