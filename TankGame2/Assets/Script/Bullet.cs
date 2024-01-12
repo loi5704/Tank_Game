@@ -10,7 +10,7 @@ public class Bullet : MonoBehaviour
 
     private Vector2 startPosition;
     private float conquareDistance = 0;
-    public Rigidbody2D rb2d;
+    private Rigidbody2D rb2d;
 
     public UnityEvent OnHit = new UnityEvent();
     private void Awake()
