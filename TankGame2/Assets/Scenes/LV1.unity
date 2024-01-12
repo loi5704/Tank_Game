@@ -996,6 +996,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bulletData: {fileID: 11400000, guid: bd2b47a8826424b48960a62a1cde9eeb, type: 2}
+  rb2d: {fileID: 0}
   OnHit:
     m_PersistentCalls:
       m_Calls: []
@@ -8807,6 +8808,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bulletData: {fileID: 11400000, guid: bd2b47a8826424b48960a62a1cde9eeb, type: 2}
+  rb2d: {fileID: 0}
   OnHit:
     m_PersistentCalls:
       m_Calls: []
@@ -9125,6 +9127,14 @@ PrefabInstance:
     - target: {fileID: 4866066081096206811, guid: 8712b5dfeea44af449ad64f921c21bcc, type: 3}
       propertyPath: m_AnchoredPosition.y
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8243953389246829501, guid: 8712b5dfeea44af449ad64f921c21bcc, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 37
+      objectReference: {fileID: 0}
+    - target: {fileID: 8243953389246829501, guid: 8712b5dfeea44af449ad64f921c21bcc, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 19
       objectReference: {fileID: 0}
     - target: {fileID: 8548212783707608149, guid: 8712b5dfeea44af449ad64f921c21bcc, type: 3}
       propertyPath: m_AnchorMax.y
