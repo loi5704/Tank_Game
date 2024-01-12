@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class TankControler : MonoBehaviour
+public class AutoTankControler : MonoBehaviour
 {
     public Rigidbody2D rb2d;
     public TankMovementData movementData;
@@ -10,10 +10,25 @@ public class TankControler : MonoBehaviour
 
     private Vector2 movementVector;
 
+    private void Update()
+    {
+        //Gọi hàm tự động bắn ở đây
+        AutoShoot();
+    }
+
+    private void AutoShoot()
+    {
+        foreach (var turret in turrets)
+        {
+            turret.Shoot();
+            Debug.Log("TankController - Auto Shoot");
+        }
+    }
+
     private void Awake()
     {
         rb2d = GetComponent<Rigidbody2D>();
-        if(turrets == null || turrets.Length == 0)
+        if (turrets == null || turrets.Length == 0)
         {
             turrets = GetComponentsInChildren<Turret>();
         }
@@ -21,7 +36,7 @@ public class TankControler : MonoBehaviour
 
     public void HandleShoot()
     {
-        foreach(var turret in turrets)
+        foreach (var turret in turrets)
         {
             turret.Shoot();
         }
@@ -39,3 +54,4 @@ public class TankControler : MonoBehaviour
 
     }
 }
+

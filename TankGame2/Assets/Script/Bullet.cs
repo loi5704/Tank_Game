@@ -10,7 +10,7 @@ public class Bullet : MonoBehaviour
 
     private Vector2 startPosition;
     private float conquareDistance = 0;
-    private Rigidbody2D rb2d;
+    public Rigidbody2D rb2d;
 
     public UnityEvent OnHit = new UnityEvent();
     private void Awake()
@@ -36,6 +36,17 @@ public class Bullet : MonoBehaviour
     {
         rb2d.velocity = Vector2.zero;
         gameObject.SetActive(false);
+
+        //Rigidbody2D rb2d = GetComponent<Rigidbody2D>();
+        //if (rb2d != null)
+        //{
+        //    rb2d.velocity = Vector2.zero;
+        //    // Additional logic to disable or destroy the object
+        //}
+        //else
+        //{
+        //    Debug.LogWarning("Rigidbody2D component not found on Bullet2 GameObject.");
+        //}
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
