@@ -16,7 +16,7 @@ public class Bullet : MonoBehaviour
     private void Awake()
     {
         rb2d = GetComponent<Rigidbody2D>();
-    } 
+    }
     public void Initialize()
     {
         startPosition = transform.position;
@@ -26,7 +26,7 @@ public class Bullet : MonoBehaviour
     public void Update()
     {
         conquareDistance = Vector2.Distance(transform.position, startPosition);
-        if (conquareDistance >= bulletData.maxDistance ) 
+        if (conquareDistance >= bulletData.maxDistance)
         {
             DisableObject();
         }
@@ -53,11 +53,25 @@ public class Bullet : MonoBehaviour
     {
         Debug.Log("Collidered" + collision.name);
         OnHit?.Invoke();
+        bool check = true;
+
         var damagable = collision.GetComponent<Damagable>();
         if (damagable != null)
         {
+            check = false;
             damagable.Hit(bulletData.damage);
         }
+
+        if (check)
+        {
+            var damagableTank = collision.GetComponent<DamagableTank>();
+            if (damagableTank != null)
+            {
+                damagableTank.Hit(bulletData.damage);
+            }
+        }
+
+
 
         DisableObject();
     }
