@@ -4,23 +4,32 @@ using UnityEngine;
 
 public class AutoTankControler : MonoBehaviour
 {
+    //Tạo ra để gắn Rigidbody2D trong Unity
     public Rigidbody2D rb2d;
+    //Tạo ra để ta có thể gán giá trị movementData vào
     public TankMovementData movementData;
+    //Nếu có nhiều Turret thì dùng cái này để gán nó vào
     public Turret[] turrets;
 
+    //Tạo một Vector2 tên là movementVector
     private Vector2 movementVector;
 
+    //Đối với hàm Update (Vòng lặp vô tận) - Ta cho hàm AutoShoot để nó có thể tự động bắn
     private void Update()
     {
         //Gọi hàm tự động bắn ở đây
         AutoShoot();
     }
 
+    //Giờ thì đến với hàm AutoShoot
     private void AutoShoot()
     {
+        //Lặp qua các turret ở trong list turret trên 
         foreach (var turret in turrets)
         {
+            //Gọi hàm turret.Shoot để bắn
             turret.Shoot();
+            //Thông báo cho biết là đang bắn 
             Debug.Log("TankController - Auto Shoot");
         }
     }

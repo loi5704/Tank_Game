@@ -6,8 +6,7 @@ using UnityEngine.Events;
 public class Damagable : MonoBehaviour
 {
     public int MaxHealth = 100;
-    public int ScoreGet = 0; // New variable for individual score
-    public int PenaltyValue = -100;
+
     [SerializeField]
     private int health = 0;
 
@@ -36,14 +35,7 @@ public class Damagable : MonoBehaviour
         Health -= damagePoints;
         if (Health <= 0)
         {
-
-            ScoreScript.ScoreScene += PenaltyValue;
-            ScoreScript.ScoreScene += ScoreGet;
-
-            //if (ScoreScript.ScoreValue < 0) ScoreScript.ScoreValue = 0;
             OnDead?.Invoke();
-            //PlayerPrefs.SetInt("PlayerScore", ScoreGet);
-            //PlayerPrefs.Save();
         }
         else
         {
@@ -57,4 +49,6 @@ public class Damagable : MonoBehaviour
         Health = Mathf.Clamp(Health, 0, MaxHealth);
         OnHeal?.Invoke();
     }
+
+
 }

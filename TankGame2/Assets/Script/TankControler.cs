@@ -13,7 +13,7 @@ public class TankControler : MonoBehaviour
     private void Awake()
     {
         rb2d = GetComponent<Rigidbody2D>();
-        if(turrets == null || turrets.Length == 0)
+        if (turrets == null || turrets.Length == 0)
         {
             turrets = GetComponentsInChildren<Turret>();
         }
@@ -21,7 +21,7 @@ public class TankControler : MonoBehaviour
 
     public void HandleShoot()
     {
-        foreach(var turret in turrets)
+        foreach (var turret in turrets)
         {
             turret.Shoot();
         }
@@ -35,7 +35,9 @@ public class TankControler : MonoBehaviour
     private void FixedUpdate()
     {
         rb2d.velocity = (Vector2)transform.right * movementVector.y * movementData.maxSpeed * Time.fixedDeltaTime;
-        rb2d.MoveRotation(transform.rotation * Quaternion.Euler(0, 0, -movementVector.x * movementData.rotationSpeed * Time.fixedDeltaTime));
+
+        rb2d.MoveRotation(transform.rotation * Quaternion.Euler(0, 0, -movementVector.x * movementData.rotationSpeed *
+        Time.fixedDeltaTime));
 
     }
 }

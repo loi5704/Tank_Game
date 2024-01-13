@@ -822,9 +822,6 @@ PrefabInstance:
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 2022629992017516563, guid: 4607e5fce7c7d0449a2a94ae509cce20, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 1590281818107357986}
-    - targetCorrespondingSourceObject: {fileID: 2022629992017516563, guid: 4607e5fce7c7d0449a2a94ae509cce20, type: 3}
-      insertIndex: -1
       addedObject: {fileID: 917420857203051157}
     - targetCorrespondingSourceObject: {fileID: 2906796847980173252, guid: 4607e5fce7c7d0449a2a94ae509cce20, type: 3}
       insertIndex: -1
@@ -894,21 +891,6 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 2022629992017516563, guid: 4607e5fce7c7d0449a2a94ae509cce20, type: 3}
   m_PrefabInstance: {fileID: 4798142493767188919}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1590281818107357986
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6811622348608903588}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: dcb300374b765eb4e91f86435f961864, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  rb2d: {fileID: 0}
-  movementData: {fileID: 11400000, guid: 5f5007597e492fb4ebe6455cc79585f5, type: 2}
-  turrets: []
 --- !u!114 &917420857203051157
 MonoBehaviour:
   m_ObjectHideFlags: 0
