@@ -1,4 +1,4 @@
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
@@ -40,15 +40,16 @@ public class DamagableTank : MonoBehaviour
         Health -= damagePoints;
         if (Health <= 0)
         {
-            ScoreScript.ScoreScene += PenaltyValue;
-            ScoreScript.ScoreScene += ScoreGet;
             //if (ScoreScript.ScoreValue < 0) ScoreScript.ScoreValue = 0;
             //OnDead?.Invoke();
+            //Reset lại trạng thái 
             transform.rotation = startRotation;
             transform.position = startport;
             Health = MaxHealth;
             //PlayerPrefs.SetInt("PlayerScore", ScoreGet);
             //PlayerPrefs.Save();
+
+            FindObjectOfType<PatrolPathMove>()?.SetStartPatrolPoint();
         }
         else
         {

@@ -22,6 +22,7 @@ public class PatrolPathMove : MonoBehaviour
 
     void MoveAlongPath()
     {
+        //Nếu không có patrolPath hoặc là độ dài patrolPath = 0 thì xuất ra màn hình console
         if (patrolPath == null || patrolPath.Length == 0)
         {
             Debug.LogWarning("Patrol Path is not set or has no points.");
@@ -44,8 +45,20 @@ public class PatrolPathMove : MonoBehaviour
         currentTarget = patrolPath.GetNextPathPoint(currentTarget.Index);
 
         // Đặt hướng di chuyển mới
+        //Xác định hướng di chuyển mới từ vị trí hiện tại đến điểm tiếp theo trên đường tuần tiện
+        //Tính toán hướng di chuyển bằng cách lấy hiệu 2 vector
         Vector2 directionToGo = currentTarget.Position - (Vector2)transform.position;
+        //Tính toán góc quay cần thiết để hướng đối tượng về huống đi mới
         float angle = Mathf.Atan2(directionToGo.y, directionToGo.x) * Mathf.Rad2Deg;
+        //Đặt quay của đối tượng theo góc vừa tính toán được
+        //angle là góc quay còn Vector3.forward là trục quay
+        //Ở đây mặc định trục quay là trục hướng tới phía trước
         transform.rotation = Quaternion.AngleAxis(angle, Vector3.forward);
+    }
+
+    public void SetStartPatrolPoint()
+    {
+        // Thiết lập lại điểm patrol point về 0
+        currentTarget = patrolPath.GetClosestPathPoint(transform.position);
     }
 }
