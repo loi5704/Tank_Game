@@ -8,6 +8,7 @@ public class Turret : MonoBehaviour
 {
     public List<Transform> turretBarrels;
     public GameObject bulletPrefab;
+    public BulletData bulletData;
     public TimeReloadData reloadData;
 
     private bool canShoot = true;
@@ -58,7 +59,7 @@ public class Turret : MonoBehaviour
                 GameObject bullet = bulletPool.CreateObject();
                 bullet.transform.position = barrel.position;
                 bullet.transform.localRotation = barrel.rotation;
-                bullet.GetComponent<Bullet>().Initialize();
+                bullet.GetComponent<Bullet>().Initialize(bulletData);
 
                 foreach (var collider in tankColliders)
                 {

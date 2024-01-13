@@ -4,12 +4,12 @@ using UnityEngine;
 
 public class TankPowerUp : MonoBehaviour
 {
-    public PowerUpEffect powerupEffect;
+    public PowerUpEffect tank;
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
         Debug.Log("HaveOnTrigger");
         Destroy(gameObject);
-        powerupEffect.Apply(collision.gameObject);
+        tank.Apply(collision.gameObject);
     }
 }

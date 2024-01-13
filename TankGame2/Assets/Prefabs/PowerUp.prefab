@@ -143,4 +143,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fd39bc890466383429ab8ee1ede64514, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  powerupEffect: {fileID: 11400000, guid: d46885406ad50474eadd5199abc130ea, type: 2}
+  tank: {fileID: 11400000, guid: d46885406ad50474eadd5199abc130ea, type: 2}

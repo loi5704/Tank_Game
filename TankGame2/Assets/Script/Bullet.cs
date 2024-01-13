@@ -17,8 +17,9 @@ public class Bullet : MonoBehaviour
     {
         rb2d = GetComponent<Rigidbody2D>();
     }
-    public void Initialize()
+    public void Initialize(BulletData bulletData)
     {
+        this.bulletData = bulletData;
         startPosition = transform.position;
         rb2d.velocity = transform.right * this.bulletData.speed;
     }
