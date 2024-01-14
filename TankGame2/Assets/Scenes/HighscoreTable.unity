@@ -1160,7 +1160,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: -4843832124752930633, guid: e55ebce32de6ab44a86629e5ce236c81, type: 3}
         m_TargetAssemblyTypeName: MenuGame, Assembly-CSharp
-        m_MethodName: Menu
+        m_MethodName: GameMode
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
