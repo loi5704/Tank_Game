@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using UnityEditor.Experimental.GraphView;
 using UnityEngine;
 using UnityEngine.Events;
 
@@ -11,6 +12,8 @@ public class DamagableTank : MonoBehaviour
     public int PenaltyValue = -100;
     [SerializeField]
     private int health = 0;
+
+    bool EnableShoot = false;
 
     Vector2 startport;
     Quaternion startRotation;
@@ -38,7 +41,16 @@ public class DamagableTank : MonoBehaviour
 
     internal void Hit(int damagePoints)
     {
-        Health -= damagePoints;
+        if (!EnableShoot)
+        {
+            Health -= damagePoints;
+
+        }
+        else
+        {
+            EnableShoot = false;
+        }
+
         if (Health <= 0)
         {
 
@@ -57,11 +69,14 @@ public class DamagableTank : MonoBehaviour
             {
                 //FindObjectOfType<PatrolPathMove>()?.SetStartPatrolPoint();
                 patrolPathMove.SetStartPatrolPoint();
+
+                EnableShoot = true;
             }
 
         }
         else
         {
+
             OnHit?.Invoke();
         }
     }
