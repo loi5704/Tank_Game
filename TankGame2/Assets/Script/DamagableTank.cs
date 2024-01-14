@@ -5,6 +5,7 @@ using UnityEngine.Events;
 
 public class DamagableTank : MonoBehaviour
 {
+    public PatrolPathMove patrolPathMove;
     public int MaxHealth = 100;
     public int ScoreGet = 0; // New variable for individual score
     public int PenaltyValue = -100;
@@ -52,7 +53,8 @@ public class DamagableTank : MonoBehaviour
             //PlayerPrefs.SetInt("PlayerScore", ScoreGet);
             //PlayerPrefs.Save();
 
-            FindObjectOfType<PatrolPathMove>()?.SetStartPatrolPoint();
+            //FindObjectOfType<PatrolPathMove>()?.SetStartPatrolPoint();
+            patrolPathMove.SetStartPatrolPoint();
         }
         else
         {

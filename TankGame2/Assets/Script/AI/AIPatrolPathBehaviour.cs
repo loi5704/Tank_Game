@@ -28,13 +28,6 @@ public class AIPatrolPathBehaviour : MonoBehaviour
         {
             if (patrolPath.Length < 2)
                 return;
-            if (!isInitialized)
-            {
-                var currentPathPoint = patrolPath.GetClosestPathPoint(tankController.transform.position);
-                this.currentIndex = currentPathPoint.Index;
-                this.currentPatrolTarget = currentPathPoint.Position;
-                isInitialized = true;
-            }
             if (Vector2.Distance(tankController.transform.position, currentPatrolTarget) < arriveDistance)
             {
                 isWaiting = true;
