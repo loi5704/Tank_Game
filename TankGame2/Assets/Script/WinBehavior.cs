@@ -10,7 +10,7 @@ public class WinBehavior : MonoBehaviour
         ScoreScript scoreScript = FindObjectOfType<ScoreScript>();
         scoreScript.SaveScore();
         Destroy(gameObject);
-        SceneManager.LoadScene(3);
+        SceneManager.LoadScene(6);
 
     }
 }

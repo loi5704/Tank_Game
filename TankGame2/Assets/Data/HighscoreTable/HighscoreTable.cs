@@ -5,6 +5,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using CodeMonkey.Utils;
 using System;
+using Unity.VisualScripting;
 
 public class HighscoreTable : MonoBehaviour
 {
@@ -15,8 +16,6 @@ public class HighscoreTable : MonoBehaviour
 
     private void Awake()
     {
-
-        
         int loadedScore = PlayerPrefs.GetInt("ScoreScene", 0);
         string loadedName = "PLAYER";
         loadedName = PlayerPrefs.GetString("PLAYER_NAME");
@@ -58,8 +57,14 @@ public class HighscoreTable : MonoBehaviour
         }
 
         highscoreEntryTransformList = new List<Transform>();
+        int z = 0;
         foreach (HighscoreEntry highscoreEntry in highscores.highscoreEntryList)
         {
+            z++;
+            if(z > 10)
+            {
+                break;
+            }
             CreateHighscoreEntryTransform(highscoreEntry, entryContainer, highscoreEntryTransformList);
         }
 
@@ -122,8 +127,8 @@ public class HighscoreTable : MonoBehaviour
                 break;
 
         }
-
         transformList.Add(entryTransform);
+
     }
 
     private void AddHighscoreEntry(int score, string name)

@@ -10,6 +10,6 @@ public class LoseBehavior : MonoBehaviour
         ScoreScript scoreScript = FindObjectOfType<ScoreScript>();
         scoreScript.SaveScore();
         Destroy(gameObject);
-        SceneManager.LoadScene(4);
+        SceneManager.LoadScene(7);
     }
 }
