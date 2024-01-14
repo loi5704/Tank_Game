@@ -1,17 +1,23 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using static UnityEngine.RuleTile.TilingRuleOutput;
 
 public class PatrolPathMove : MonoBehaviour
 {
     public PatrolPath patrolPath;
+    private PatrolPath.PathPoint currentTarget;
+
+    PatrolPath.PathPoint StartcurrentTarget;
+
     public float moveSpeed = 2f;
     public float arriveDistance = 0.1f;
-
-    private PatrolPath.PathPoint currentTarget;
+    Vector2 StartPosition;
 
     void Start()
     {
+        StartPosition = transform.position;
+        StartcurrentTarget = currentTarget;
         SetNextTarget();
     }
 
@@ -58,7 +64,8 @@ public class PatrolPathMove : MonoBehaviour
 
     public void SetStartPatrolPoint()
     {
-        // Thiết lập lại điểm patrol point về 0
-        currentTarget = patrolPath.GetClosestPathPoint(transform.position);
+        currentTarget = StartcurrentTarget;
+        transform.position = StartPosition;
+        SetNextTarget();
     }
 }
