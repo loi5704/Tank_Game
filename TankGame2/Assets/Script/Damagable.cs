@@ -5,9 +5,9 @@ using UnityEngine.Events;
 
 public class Damagable : MonoBehaviour
 {
-    public int MaxHealth = 100;
+    public int MaxHealth = 50;
     public int ScoreGet = 0; // New variable for individual score
-    public int PenaltyValue = -100;
+    public int PenaltyValue = 0;
     [SerializeField]
     private int health = 0;
 
