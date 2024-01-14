@@ -15,7 +15,6 @@ public class MenuGame : MonoBehaviour
         SceneManager.LoadScene(2);
 
     }
-
     public void Menu()
     {
         SceneManager.LoadScene(6);
@@ -38,7 +37,11 @@ public class MenuGame : MonoBehaviour
     public void Exit()
     {
         SceneManager.LoadScene(6);
-    }    
+    }
+    public void Instruction()
+    {
+        SceneManager.LoadScene(8);
+    }
 }
 
 

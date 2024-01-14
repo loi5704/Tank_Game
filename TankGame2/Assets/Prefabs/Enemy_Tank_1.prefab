@@ -729,6 +729,38 @@ PrefabInstance:
       propertyPath: m_Sprite
       value: 
       objectReference: {fileID: 21300000, guid: 25f704a7d16c9124fbef61d8a921c6d5, type: 3}
+    - target: {fileID: 3798424137613181093, guid: 4607e5fce7c7d0449a2a94ae509cce20, type: 3}
+      propertyPath: ScoreGet
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 3798424137613181093, guid: 4607e5fce7c7d0449a2a94ae509cce20, type: 3}
+      propertyPath: PenaltyValue
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3798424137613181093, guid: 4607e5fce7c7d0449a2a94ae509cce20, type: 3}
+      propertyPath: OnHealthChange.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3798424137613181093, guid: 4607e5fce7c7d0449a2a94ae509cce20, type: 3}
+      propertyPath: OnHealthChange.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 8440256667645868943}
+    - target: {fileID: 3798424137613181093, guid: 4607e5fce7c7d0449a2a94ae509cce20, type: 3}
+      propertyPath: OnHealthChange.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3798424137613181093, guid: 4607e5fce7c7d0449a2a94ae509cce20, type: 3}
+      propertyPath: OnHealthChange.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: set_value
+      objectReference: {fileID: 0}
+    - target: {fileID: 3798424137613181093, guid: 4607e5fce7c7d0449a2a94ae509cce20, type: 3}
+      propertyPath: OnHealthChange.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: UnityEngine.UI.Slider, UnityEngine.UI
+      objectReference: {fileID: 0}
+    - target: {fileID: 3798424137613181093, guid: 4607e5fce7c7d0449a2a94ae509cce20, type: 3}
+      propertyPath: OnHealthChange.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     - target: {fileID: 5811710766951949660, guid: 4607e5fce7c7d0449a2a94ae509cce20, type: 3}
       propertyPath: movementData
       value: 
@@ -949,6 +981,7 @@ MonoBehaviour:
   turretBarrels:
   - {fileID: 7285593043687134288}
   bulletPrefab: {fileID: 6382634756416816951, guid: ace122a225e2d9e4e9b1b0d03c9eaafc, type: 3}
+  bulletData: {fileID: 0}
   reloadData: {fileID: 11400000, guid: c947c759cd699604e842e4b13a1f0efe, type: 2}
   bulletPoolCount: 10
   OnShoot:

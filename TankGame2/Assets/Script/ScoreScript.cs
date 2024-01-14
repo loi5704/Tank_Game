@@ -12,8 +12,6 @@ public class ScoreScript : MonoBehaviour
     {
         ScoreScene = 0;
         score = GetComponent<Text>();
-
-
     }
 
     void Update()

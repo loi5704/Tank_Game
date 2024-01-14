@@ -163,7 +163,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   MaxHealth: 100
-  ScoreGet: 0
+  ScoreGet: 50
   PenaltyValue: 0
   health: 0
   OnDead:

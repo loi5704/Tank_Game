@@ -164,6 +164,10 @@ PrefabInstance:
       propertyPath: m_WasSpriteAssigned
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 3798424137613181093, guid: 4607e5fce7c7d0449a2a94ae509cce20, type: 3}
+      propertyPath: PenaltyValue
+      value: -100
+      objectReference: {fileID: 0}
     - target: {fileID: 5811710766951949660, guid: 4607e5fce7c7d0449a2a94ae509cce20, type: 3}
       propertyPath: movementData
       value: 

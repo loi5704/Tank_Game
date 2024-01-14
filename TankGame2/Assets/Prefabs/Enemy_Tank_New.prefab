@@ -969,6 +969,30 @@ PrefabInstance:
       propertyPath: PenaltyValue
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3798424137613181093, guid: 4607e5fce7c7d0449a2a94ae509cce20, type: 3}
+      propertyPath: OnHealthChange.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3798424137613181093, guid: 4607e5fce7c7d0449a2a94ae509cce20, type: 3}
+      propertyPath: OnHealthChange.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1234920440983972542}
+    - target: {fileID: 3798424137613181093, guid: 4607e5fce7c7d0449a2a94ae509cce20, type: 3}
+      propertyPath: OnHealthChange.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3798424137613181093, guid: 4607e5fce7c7d0449a2a94ae509cce20, type: 3}
+      propertyPath: OnHealthChange.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: set_value
+      objectReference: {fileID: 0}
+    - target: {fileID: 3798424137613181093, guid: 4607e5fce7c7d0449a2a94ae509cce20, type: 3}
+      propertyPath: OnHealthChange.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: UnityEngine.UI.Slider, UnityEngine.UI
+      objectReference: {fileID: 0}
+    - target: {fileID: 3798424137613181093, guid: 4607e5fce7c7d0449a2a94ae509cce20, type: 3}
+      propertyPath: OnHealthChange.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     - target: {fileID: 5811710766951949660, guid: 4607e5fce7c7d0449a2a94ae509cce20, type: 3}
       propertyPath: movementData
       value: 

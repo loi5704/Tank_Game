@@ -509,6 +509,7 @@ MonoBehaviour:
   - {fileID: 187690786533245781}
   - {fileID: 2850159989676578279}
   bulletPrefab: {fileID: 6382634756416816951, guid: ace122a225e2d9e4e9b1b0d03c9eaafc, type: 3}
+  bulletData: {fileID: 0}
   reloadData: {fileID: 0}
   bulletPoolCount: 2
   OnShoot:

@@ -7,7 +7,7 @@ public class Damagable : MonoBehaviour
 {
     public int MaxHealth = 50;
     public int ScoreGet = 0; // New variable for individual score
-    public int PenaltyValue = 0;
+    public int PenaltyValue = -100;
     [SerializeField]
     private int health = 0;
 
@@ -37,8 +37,6 @@ public class Damagable : MonoBehaviour
         if (Health <= 0)
         {
 
-            ScoreScript.ScoreScene += PenaltyValue;
-            ScoreScript.ScoreScene += ScoreGet;
 
             //if (ScoreScript.ScoreValue < 0) ScoreScript.ScoreValue = 0;
             OnDead?.Invoke();

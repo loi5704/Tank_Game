@@ -16,7 +16,7 @@ public class HighscoreTable : MonoBehaviour
     private void Awake()
     {
 
-
+        
         int loadedScore = PlayerPrefs.GetInt("ScoreScene", 0);
         string loadedName = "PLAYER";
         loadedName = PlayerPrefs.GetString("PLAYER_NAME");
