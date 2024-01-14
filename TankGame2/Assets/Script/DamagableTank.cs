@@ -53,8 +53,12 @@ public class DamagableTank : MonoBehaviour
             //PlayerPrefs.SetInt("PlayerScore", ScoreGet);
             //PlayerPrefs.Save();
 
-            //FindObjectOfType<PatrolPathMove>()?.SetStartPatrolPoint();
-            patrolPathMove.SetStartPatrolPoint();
+            if (patrolPathMove != null)
+            {
+                //FindObjectOfType<PatrolPathMove>()?.SetStartPatrolPoint();
+                patrolPathMove.SetStartPatrolPoint();
+            }
+
         }
         else
         {
